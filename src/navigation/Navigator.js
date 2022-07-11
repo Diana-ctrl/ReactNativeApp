@@ -16,7 +16,7 @@ export const Navigator = () => {
     return (
       <Tab.Navigator
         screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color}) => {
+          tabBarIcon: ({focused}) => {
             let iconName;
 
             if (route.name === 'Home') {

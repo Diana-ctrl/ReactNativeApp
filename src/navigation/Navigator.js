@@ -7,14 +7,30 @@ import {Category1} from '../screens/Category1';
 import {Category2} from '../screens/Category2';
 import {Category3} from '../screens/Category3';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export const Navigator = () => {
   const TabStack = () => {
     return (
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({route}) => ({
+          tabBarIcon: ({focused, color}) => {
+            let iconName;
+
+            if (route.name === 'Home') {
+              iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'Cart') {
+              iconName = focused ? 'cart' : 'cart-outline';
+            } else if (route.name === 'Profile') {
+              iconName = focused ? 'person' : 'person-outline';
+            }
+            return <Ionicons name={iconName} color={'#7B68EE'} size={30}/>;
+          },
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+        })}>
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Cart" component={Cart} />
         <Tab.Screen name="Profile" component={Profile} />

@@ -6,6 +6,8 @@ import {Home} from '../screens/HomeScreen';
 import {Category1} from '../screens/Category1';
 import {Category2} from '../screens/Category2';
 import {Category3} from '../screens/Category3';
+import {FirstScreen} from '../screens/first-screen';
+import screen from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 const Stack = createNativeStackNavigator();
@@ -39,7 +41,15 @@ export const Navigator = () => {
   };
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="FirstScreen">
+      <Stack.Screen
+        options={{
+          title: '',
+          headerShown: false,
+        }}
+        name="FirstScreen"
+        component={screen.FirstScreen}
+      />
       <Stack.Screen
         options={{
           headerShown: false,

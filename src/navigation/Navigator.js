@@ -26,10 +26,10 @@ export const Navigator = () => {
             } else if (route.name === 'Profile') {
               iconName = focused ? 'person' : 'person-outline';
             }
-            return <Ionicons name={iconName} color={'#7B68EE'} size={30}/>;
+            return <Ionicons name={iconName} color={'#7B68EE'} size={30} />;
           },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: '#8A2BE2',
+          tabBarInactiveTintColor: '#7B68EE',
         })}>
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Cart" component={Cart} />

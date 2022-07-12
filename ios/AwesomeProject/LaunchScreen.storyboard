@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="icone" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-I1-xRp">
-                                <rect key="frame" x="0.0" y="87" width="375" height="370"/>
+                                <rect key="frame" x="0.0" y="95" width="375" height="370"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Healthy food" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="450" width="375" height="71.5"/>
+                                <rect key="frame" x="0.0" y="543" width="375" height="71.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>
                                 <color key="textColor" red="0.73031387590361618" green="0.80306511499734212" blue="0.45789013085653346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.63706845050000005" green="0.73774486780000004" blue="0.46269202230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -33,12 +33,16 @@
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="200" id="49d-nC-j88"/>
+                            <constraint firstItem="pzv-I1-xRp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="200" id="7JN-wD-Z3Z"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="2" id="JgI-Py-5RG"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
                             <constraint firstItem="pzv-I1-xRp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="200" id="aVy-bw-FKo"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="200" id="bGf-XT-EnV"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fQi-J8-wrY"/>
                             <constraint firstItem="pzv-I1-xRp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="200" id="hCO-Kf-ilC"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
+                            <constraint firstItem="pzv-I1-xRp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="200" id="scc-Vv-KnS"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="x7j-FC-K8j"/>
                         </constraints>
                     </view>

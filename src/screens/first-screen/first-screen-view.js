@@ -11,16 +11,14 @@ export const FirstScreenView = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <FastImage
-          style={styles.image}
-          resizeMode="cover"
-          source={require('../../assets/images/first-screen/delivery-man.webp')}
-        />
-      </View>
-      {/* <TouchableOpacity onPress={() => handler()}>
+      <FastImage
+        style={styles.image}
+        resizeMode="cover"
+        source={require('../../assets/images/first-screen/delivery-man.webp')}
+      />
+      <TouchableOpacity onPress={() => handler()} style={styles.button}>
         <Text>Перейти в Profile</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
     </View>
   );
 };
@@ -38,6 +36,9 @@ const styles = StyleSheet.create({
     zIndex: 0,
     width: '100%',
     height: '100%',
+  },
+  button: {
+    zIndex: 1,
   },
 });
 

@@ -10,6 +10,7 @@ import {FirstScreen} from '../screens/first-screen';
 import screen from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 

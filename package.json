@@ -16,12 +16,16 @@
     "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
     "react-native": "0.66.4",
+    "react-native-fast-image": "^8.5.11",
+    "react-native-linear-gradient": "^2.6.2",
+    "react-native-material-ripple": "^0.9.1",
     "react-native-pager-view": "^5.4.9",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-svg": "^12.1.1",
     "react-native-tab-view": "^3.1.1",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "react-redux": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -35,5 +39,9 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Diana-ctrl/ReactNativeApp.git",
+  "author": "Diana_Lyah <diana.lyah.96@mail.ru>",
+  "license": "MIT"
 }

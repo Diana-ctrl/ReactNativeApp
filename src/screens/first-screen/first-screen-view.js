@@ -1,10 +1,15 @@
 import React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {useNavigation} from '@react-navigation/native';
+import {Button} from '../../components';
+import STRINGS from '../../localization';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 export const FirstScreenView = () => {
+  //const insets = useSafeAreaInsets();
   const navigation = useNavigation();
+
   const handler = () => {
     navigation.navigate('Profile');
   };
@@ -16,19 +21,25 @@ export const FirstScreenView = () => {
         resizeMode="cover"
         source={require('../../assets/images/first-screen/delivery-man.webp')}
       />
-      <TouchableOpacity onPress={() => handler()} style={styles.button}>
-        <Text>Перейти в Profile</Text>
-      </TouchableOpacity>
+      <View style={styles.contentContainer}>
+        <Button
+          //onPress={props.handleSignUp}
+          type="primary"
+          value={STRINGS.firstScreen.createAccount}
+        />
+        <Button
+          //onPress={props.handleLogIn}
+          type="primary"
+          value={STRINGS.firstScreen.logIn}
+          containerStyles={styles.button}
+        />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-  imageContainer: {
-    width: '100%',
     flex: 1,
   },
   image: {
@@ -38,7 +49,14 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   button: {
-    zIndex: 1,
+    marginTop: 8,
+  },
+  contentContainer: {
+    position: 'absolute',
+    bottom: 50,
+    width: '100%',
+    paddingHorizontal: 16,
+    paddingBottom: 16,
   },
 });
 

@@ -28,6 +28,8 @@ const _Text = ({
   selectable = false,
   onPress,
 }) => {
+  console.log('COLOR!!!', color);
+  const styles = getStyles(fontWeight, opacity, fontSize, color, lineHeight);
   return (
     <Text
       style={[styles.text, style]}
@@ -39,7 +41,7 @@ const _Text = ({
   );
 };
 
-const styles = (fontWeight, opacity, fontSize, color, lineHeight) =>
+const getStyles = (fontWeight, opacity, fontSize, color, lineHeight) =>
   StyleSheet.create({
     text: {
       color,

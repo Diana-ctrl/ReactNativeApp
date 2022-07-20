@@ -34,6 +34,9 @@ const Button = ({
   const Touchable = Platform.OS === 'ios' ? TouchableOpacity : Ripple;
 
   const buttonStyles = getButtonStyles(disabled)[type];
+
+  const styles = getStyles(size, buttonStyles);
+
   return (
     <Touchable
       onPress={onPress}
@@ -77,8 +80,8 @@ const getButtonStyles = disabled => ({
   },
 });
 
-function styles(size, buttonStyles) {
-  return StyleSheet.create({
+const getStyles = (size, buttonStyles) =>
+  StyleSheet.create({
     container: {
       ...(size !== 'small' && {width: '100%'}),
       height: size === 'small' ? 40 : 56,
@@ -87,7 +90,9 @@ function styles(size, buttonStyles) {
       borderRadius: 32,
       ...buttonStyles,
     },
-    value: {paddingHorizontal: 24},
+    value: {
+      paddingHorizontal: 24,
+    },
     activityIndicator: {position: 'absolute'},
     gradient: {
       position: 'absolute',
@@ -97,6 +102,5 @@ function styles(size, buttonStyles) {
       borderRadius: 32,
     },
   });
-}
 
 export default Button;

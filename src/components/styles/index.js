@@ -1,8 +1,8 @@
-import { Dimensions } from 'react-native';
+import {Dimensions} from 'react-native';
 
 import RNStyles from '@tapston/react-native-styles';
 
-const { height, width } = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 
 export const screenHeight = height;
 export const screenWidth = width;
@@ -20,13 +20,13 @@ export const colors = {
   },
 
   primary: {
-    default: '#4B17B5',
+    default: '#adff2f',
     error: '#E8484E',
-    dark: '#330099',
-    darkmode: '#C3A4FF',
-    light: '#E6DAFF',
+    dark: '#008000',
+    darkmode: '#228b22',
+    light: '#90ee90',
     bg: '#F4EFFF',
-    gradient: ['#4815B4', '#9836BA'],
+    gradient: ['#2e8b57', '#98fb98'],
   },
 
   error: {
@@ -42,24 +42,6 @@ export const colors = {
   obsidian: '#110C1A',
   gray: '#DFE7F8',
 
-  canticleOfCreation: '#FFDCA8',
-  myGodAndMyAll: '#D1F7FE',
-  capabilities: '#EEF7FF',
-  fearAndTrust: '#DFE7F8',
-  gardenOfCommunion: '#E5FBFF',
-  pilgrimsAndForeigners: '#F8E6E9',
-
-  sandstone: '#949199',
-  ivory: '#F8F7FA',
-  lavender: '#F4EFFF',
-  purple: '#4B17B5',
-  amethyst: '#9836BA',
-  violet: '#4815B4',
-  wine: '#330099',
-  lilac: '#E6DAFF',
-  dovegrey: '#C8C6CC',
-  silver: '#F1F0F2',
-  border: '#cad1e2',
 };
 
 export const hitSlop = {

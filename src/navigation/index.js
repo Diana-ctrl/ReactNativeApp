@@ -4,11 +4,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {useSelector} from 'react-redux';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {color} from '../components/styles';
+import {colors} from '../styles';
 
 import AuthStack from './auth';
-// import MainStack from './main';
-// import screens from '../screens';
+import MainStack from './main';
 
 const RootStackNav = createStackNavigator();
 
@@ -29,13 +28,17 @@ const RootStack = () => {
             iconName = focused ? 'person' : 'person-outline';
           }
           return (
-            <Ionicons name={iconName} color={color.gradient[0]} size={30} />
+            <Ionicons
+              name={iconName}
+              color={colors.primary.gradient[0]}
+              size={30}
+            />
           );
         },
-        tabBarActiveTintColor: color.gradient[0],
-        tabBarInactiveTintColor: color.gradient[1],
+        tabBarActiveTintColor: colors.primary.gradient[0],
+        tabBarInactiveTintColor: colors.primary.gradient[1],
       })}>
-      {userData.role === 'user' ? (
+      {/* {userData.role === 'user' ? (
         <RootStackNav.Screen
           name="Main"
           options={{
@@ -43,15 +46,15 @@ const RootStack = () => {
           }}
           component={MainStack}
         />
-      ) : (
-        <RootStackNav.Screen
-          name="Auth"
-          options={{
-            headerShown: false,
-          }}
-          component={AuthStack}
-        />
-      )}
+      ) : ( */}
+      <RootStackNav.Screen
+        name="Auth"
+        options={{
+          headerShown: false,
+        }}
+        component={AuthStack}
+      />
+      {/* )} */}
     </RootStackNav.Navigator>
   );
 };

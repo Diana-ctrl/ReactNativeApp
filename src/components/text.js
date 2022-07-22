@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-import {colors} from './styles';
+import {colors} from '../styles';
 
 /**
  * @component Text
@@ -28,7 +28,6 @@ const _Text = ({
   selectable = false,
   onPress,
 }) => {
-  console.log('COLOR!!!', color);
   const styles = getStyles(fontWeight, opacity, fontSize, color, lineHeight);
   return (
     <Text

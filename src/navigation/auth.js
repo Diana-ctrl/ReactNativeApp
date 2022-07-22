@@ -54,7 +54,7 @@ const AuthStack = () => {
         name="SignUp"
         component={screens.SignUp}
       />
-      <AuthStackNav.Screen
+      {/* <AuthStackNav.Screen
         options={({navigation}) => ({
           headerTransparent: true,
           title: '',
@@ -69,7 +69,7 @@ const AuthStack = () => {
         })}
         name="ForgotPassword"
         component={screens.ForgotPassword}
-      />
+      /> */}
     </AuthStackNav.Navigator>
   );
 };

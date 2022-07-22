@@ -1,7 +1,5 @@
 import {Dimensions} from 'react-native';
 
-//import RNStyles from '@tapston/react-native-styles';
-
 const {height, width} = Dimensions.get('window');
 
 export const screenHeight = height;

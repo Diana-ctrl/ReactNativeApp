@@ -10,7 +10,7 @@ import Ripple from 'react-native-material-ripple';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {Text} from '.';
-import {colors} from './styles';
+import {colors} from '../styles';
 
 /**
  * Button component

@@ -8,8 +8,6 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import RootStack from './navigation';
 
-// import STRINGS from './localization';
-// import { colors } from './styles';
 
 const App = () => {
   const dispatch = useDispatch();

@@ -1,3 +1,4 @@
 import Text from './text';
 import Button from './button';
-export {Text, Button};
+import GoBackButton from './go-back-button';
+export {Text, Button, GoBackButton};

@@ -6,14 +6,7 @@ import {Button} from '../../components';
 import STRINGS from '../../localization';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-export const FirstScreenView = () => {
-  //const insets = useSafeAreaInsets();
-  const navigation = useNavigation();
-
-  const handler = () => {
-    navigation.navigate('Profile');
-  };
-
+export const FirstScreenView = props => {
   return (
     <View style={styles.container}>
       <FastImage
@@ -23,12 +16,12 @@ export const FirstScreenView = () => {
       />
       <View style={styles.contentContainer}>
         <Button
-          //onPress={props.handleSignUp}
+          onPress={props.handleSignUp}
           type="primary"
           value={STRINGS.firstScreen.createAccount}
         />
         <Button
-          //onPress={props.handleLogIn}
+          onPress={props.handleLogIn}
           type="primary"
           value={STRINGS.firstScreen.logIn}
           containerStyles={styles.button}

@@ -42,9 +42,9 @@ export const colors = {
 
 };
 
-// export const hitSlop = {
-//   top: RNStyles.h(16),
-//   right: RNStyles.w(16),
-//   bottom: RNStyles.h(16),
-//   left: RNStyles.w(16),
-// };
+export const hitSlop = {
+  top: 16,
+  right: 16,
+  bottom: 16,
+  left: 16,
+};

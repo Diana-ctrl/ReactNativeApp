@@ -7,8 +7,8 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const LogInView = props => {
   const insets = useSafeAreaInsets();
-  const { keyboardShown } = useKeyboard();
-  const styles = getStyles(insets, keyboardShown);
+  //const { keyboardShown } = useKeyboard();
+  //const styles = getStyles(insets, keyboardShown);
 
   return (
     <View style={styles.container}>

@@ -1386,6 +1386,10 @@
   resolved "https://registry.npmjs.org/@react-native-community/netinfo/-/netinfo-9.3.0.tgz#9792c23341eab5c629566baee016146f4f3f6086"
   integrity sha512-NNdMeIXXqmPCbXrWxVqRzZ1gEZ6L1ykotWnCZLVjQBUgjyGWdL5LiDM/bcIa5DLzqZY7Km08rMgB7BoHUuEmnQ==
 
+"@react-native-masked-view/masked-view@react-native-masked-view/masked-view":
+  version "0.2.7"
+  resolved "https://codeload.github.com/react-native-masked-view/masked-view/tar.gz/8c7ec78e931e3408da2734039e33cc9ef0f6e7e1"
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
@@ -1508,6 +1512,11 @@
   integrity sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@tapston/react-native-animation@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@tapston/react-native-animation/-/react-native-animation-1.0.1.tgz#a928de2ff3b2d2588ab078dc3b51fbf96fccd6ba"
+  integrity sha512-EVIlHDIQD53c5/YkxwmDXu/Qp4igJXXshsMLJfGUsLoPXeqzIy52EMXeLFcpVgp60p4KjH4FdZREsIMoZOM+ew==
 
 "@tootallnate/once@1":
   version "1.1.2"

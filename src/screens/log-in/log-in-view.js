@@ -4,7 +4,7 @@ import {Keyboard, KeyboardAvoidingView, Platform, TouchableOpacity, View, StyleS
 import LinearGradient from 'react-native-linear-gradient';
 //import MaskedView from '@react-native-masked-view/masked-view';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-
+import {Text} from '../../components';
 const LogInView = props => {
   const insets = useSafeAreaInsets();
   //const { keyboardShown } = useKeyboard();
@@ -12,6 +12,7 @@ const LogInView = props => {
 
   return (
     <View style={styles.container}>
+      <Text>Diana</Text>
     </View>
   );
 };

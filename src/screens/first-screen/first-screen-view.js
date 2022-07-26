@@ -1,10 +1,8 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import FastImage from 'react-native-fast-image';
-import {useNavigation} from '@react-navigation/native';
 import {Button} from '../../components';
 import STRINGS from '../../localization';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 export const FirstScreenView = props => {
   return (

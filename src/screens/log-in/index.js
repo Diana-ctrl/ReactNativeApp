@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux';
 
 import LogInView from './log-in-view';
 
-import { updateUserData } from '../../store/reducers/user';
+import {updateUserData} from '../../store/reducers/user';
 
 import STRINGS from '../../localization';
 

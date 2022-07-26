@@ -1,6 +1,6 @@
 import FirstScreen from './first-screen';
-import LogIn from './logIn';
-import SignUp from './signUp';
+import LogIn from './log-in';
+import SignUp from './sign-up';
 
 export default {
   FirstScreen,

@@ -5,7 +5,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import Root from './src';
 import 'react-native-gesture-handler';
-import {store} from './src/app/store';
+import {store} from './src/toolkit';
 
 const AppContainer = () => {
   return (

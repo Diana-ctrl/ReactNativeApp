@@ -56,7 +56,7 @@ const SignUpView = props => {
         <Animated.View
           style={[
             {
-              transform: [{translateX: props.offsetY}],
+              transform: [{translateX: props.carrotsetX}],
             },
           ]}>
           <FastImage
@@ -65,6 +65,19 @@ const SignUpView = props => {
             resizeMode="contain"
           />
         </Animated.View>
+        <Animated.View
+          style={[
+            {
+              transform: [{translateY: props.coffeesetY}],
+            },
+          ]}>
+          <FastImage
+            source={require('../../assets/images/hot-drink.png')}
+            style={styles.imgCoffee}
+            resizeMode="contain"
+          />
+        </Animated.View>
+
       </View>
     </View>
   );
@@ -87,12 +100,18 @@ const getStyles = insets =>
       marginTop: 10,
     },
     containerForImgages: {
+      display: 'flex',
+      flexDirection: 'row',
       marginTop: 10,
     },
     imgCarrot: {
       height: 100,
       width: 100,
     },
+    imgCoffee: {
+      height: 100,
+      width: 100,
+    }
   });
 
 export default SignUpView;

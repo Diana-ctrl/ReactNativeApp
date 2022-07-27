@@ -5,22 +5,39 @@ import {Animated} from 'react-native';
 const SignUpContainer = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const offsetY = useRef(new Animated.Value(0)).current;
+  const carrotsetX = useRef(new Animated.Value(0)).current;
+  const coffeesetY = useRef(new Animated.Value(0)).current;
 
-  const startMove = () => {
+  const startMoveCarrot = () => {
     Animated.sequence([
-      Animated.delay(100),
-      Animated.timing(offsetY, {
+      Animated.delay(300),
+      Animated.timing(carrotsetX, {
         toValue: -20,
         duration: 2000,
         useNativeDriver: true,
       }),
-      Animated.timing(offsetY, {
+      Animated.timing(carrotsetX, {
         toValue: 0,
         duration: 2000,
         useNativeDriver: true,
       }),
-    ]).start(startMove);
+    ]).start(startMoveCarrot);
+  };
+
+  const startMoveCoffee = () => {
+    Animated.sequence([
+      Animated.delay(300),
+      Animated.timing(coffeesetY, {
+        toValue: 20,
+        duration: 2000,
+        useNativeDriver: true,
+      }),
+      Animated.timing(coffeesetY, {
+        toValue: 0,
+        duration: 2000,
+        useNativeDriver: true,
+      }),
+    ]).start(startMoveCoffee);
   };
 
   const onChangeEmail = event => {
@@ -35,14 +52,16 @@ const SignUpContainer = props => {
     props.navigation.navigate('LogIn');
   };
   useEffect(() => {
-    startMove();
+    startMoveCarrot();
+    startMoveCoffee();
   }, []);
 
   return (
     <SignUpView
       email={email}
       password={password}
-      offsetY={offsetY}
+      carrotsetX={carrotsetX}
+      coffeesetY={coffeesetY}
       goToLogInScreen={goToLogInScreen}
       onChangeEmail={onChangeEmail}
       onChangePassword={onChangePassword}

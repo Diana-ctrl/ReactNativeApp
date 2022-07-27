@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Animated} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Text, Input} from '../../components';
+import FastImage from 'react-native-fast-image';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
 import STRINGS from '../../localization';
@@ -10,6 +11,8 @@ import {colors} from '../../styles';
 const SignUpView = props => {
   const insets = useSafeAreaInsets();
   const styles = getStyles(insets);
+  console.log('props.offsetY!!!', props.offsetY);
+
   return (
     <View style={styles.container}>
       <MaskedView
@@ -49,6 +52,20 @@ const SignUpView = props => {
           containerStyles={styles.secondInput}
         />
       </View>
+      <View style={styles.containerForImgages}>
+        <Animated.View
+          style={[
+            {
+              transform: [{translateX: props.offsetY}],
+            },
+          ]}>
+          <FastImage
+            source={require('../../assets/images/carrot.png')}
+            style={styles.imgCarrot}
+            resizeMode="contain"
+          />
+        </Animated.View>
+      </View>
     </View>
   );
 };
@@ -68,6 +85,13 @@ const getStyles = insets =>
     },
     secondInput: {
       marginTop: 10,
+    },
+    containerForImgages: {
+      marginTop: 10,
+    },
+    imgCarrot: {
+      height: 100,
+      width: 100,
     },
   });
 

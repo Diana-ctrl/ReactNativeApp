@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Animated, Keyboard, TextInput, View, StyleSheet} from 'react-native';
 
-//import RNStyles from '@tapston/react-native-styles';
 import {animateLayout} from '@tapston/react-native-animation';
 
 import FastImage from 'react-native-fast-image';
@@ -126,7 +125,10 @@ const Input = ({
         />
         {!!errorText && (
           <View style={styles.imageContainer}>
-            <FastImage style={styles.image} source={require('../assets/images/error.png')} />
+            <FastImage
+              style={styles.image}
+              source={require('../assets/images/error.png')}
+            />
           </View>
         )}
 
@@ -155,7 +157,10 @@ const Input = ({
               $onChange('');
             }}
             style={styles.imageContainer}>
-            <FastImage style={styles.image} source={require('../assets/images/cross.png')} />
+            <FastImage
+              style={styles.image}
+              source={require('../assets/images/cross.png')}
+            />
           </Touchable>
         )}
       </View>
@@ -180,7 +185,7 @@ const getInputStyles = (isFocused, disabled, hasError) => ({
     : hasError
     ? colors.error.default
     : isFocused
-    ? colors.primary.default
+    ? colors.primary.darkmode
     : colors.grayscale[4],
   backgroundColor: disabled ? colors.grayscale[0.2] : 'transparent',
 });

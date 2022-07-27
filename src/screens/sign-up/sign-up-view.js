@@ -42,6 +42,12 @@ const SignUpView = props => {
           placeholder={STRINGS.signUp.email}
           onChange={props.onChangeEmail}
         />
+        <Input
+          value={props.password}
+          placeholder={STRINGS.signUp.password}
+          onChange={props.onChangePassword}
+          containerStyles={styles.secondInput}
+        />
       </View>
     </View>
   );
@@ -59,6 +65,9 @@ const getStyles = insets =>
     },
     inputBlock: {
       marginTop: 40,
+    },
+    secondInput: {
+      marginTop: 10,
     },
   });
 

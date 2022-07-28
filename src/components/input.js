@@ -185,7 +185,7 @@ const getInputStyles = (isFocused, disabled, hasError) => ({
     : hasError
     ? colors.error.default
     : isFocused
-    ? colors.primary.darkmode
+    ? colors.primary.gradient[0]
     : colors.grayscale[4],
   backgroundColor: disabled ? colors.grayscale[0.2] : 'transparent',
 });

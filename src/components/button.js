@@ -72,7 +72,7 @@ const Button = ({
 const getButtonStyles = disabled => ({
   primary: {
     color: colors.grayscale[0],
-    backgroundColor: !disabled ? 'transparent' : colors.primary.light,
+    backgroundColor: !disabled ? 'transparent' : colors.primary.disabled,
   },
   secondary: {
     color: !disabled ? colors.primary.default : colors.grayscale[0],

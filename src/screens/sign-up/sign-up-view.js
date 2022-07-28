@@ -1,9 +1,14 @@
 import React from 'react';
-//import {transform} from '@babel/cores ';
-import {StyleSheet, View, Animated} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Animated,
+  KeyboardAvoidingView,
+  Platform,
+  Keyboard,
+} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {Text, Input} from '../../components';
-import FastImage from 'react-native-fast-image';
+import {Text, Input, Button} from '../../components';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
 import STRINGS from '../../localization';
@@ -78,14 +83,22 @@ const SignUpView = props => {
           />
         </Animated.View> */}
         <Animated.Image
-          style=
-          {[
-            styles.img,
-            {transform: [{rotate: props.rotateData}]}
-          ]}
+          style={[styles.img, {transform: [{rotate: props.rotateData}]}]}
           source={require('../../assets/images/tableware.png')}
         />
       </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={styles.avoidingView}>
+        <View onTouchStart={Keyboard.dismiss} style={styles.buttonContainer}>
+          <Button
+            disabled={props.password.length < 8 || !props.email.includes('@')}
+            onPress={props.handleSignUp}
+            value={STRINGS.signUp.title}
+            isLoading={props.isLoading}
+          />
+        </View>
+      </KeyboardAvoidingView>
     </View>
   );
 };
@@ -115,6 +128,14 @@ const getStyles = insets =>
     img: {
       height: 150,
       width: 150,
+    },
+    avoidingView: {
+      flex: 1,
+    },
+    buttonContainer: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      paddingBottom: 16,
     },
   });
 

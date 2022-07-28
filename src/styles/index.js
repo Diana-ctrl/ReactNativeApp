@@ -24,6 +24,7 @@ export const colors = {
     darkmode: '#228b22',
     light: '#90ee90',
     bg: '#F4EFFF',
+    disabled: '#c4e8be',
     gradient: ['#2e8b57', '#98fb98'],
   },
 

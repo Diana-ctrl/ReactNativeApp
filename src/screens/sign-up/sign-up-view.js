@@ -1,4 +1,5 @@
 import React from 'react';
+//import {transform} from '@babel/cores ';
 import {StyleSheet, View, Animated} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Text, Input} from '../../components';
@@ -11,7 +12,6 @@ import {colors} from '../../styles';
 const SignUpView = props => {
   const insets = useSafeAreaInsets();
   const styles = getStyles(insets);
-  console.log('props.offsetY!!!', props.offsetY);
 
   return (
     <View style={styles.container}>
@@ -53,7 +53,7 @@ const SignUpView = props => {
         />
       </View>
       <View style={styles.containerForImgages}>
-        <Animated.View
+        {/* <Animated.View
           style={[
             {
               transform: [{translateX: props.carrotsetX}],
@@ -61,7 +61,7 @@ const SignUpView = props => {
           ]}>
           <FastImage
             source={require('../../assets/images/carrot.png')}
-            style={styles.imgCarrot}
+            style={styles.img}
             resizeMode="contain"
           />
         </Animated.View>
@@ -73,11 +73,18 @@ const SignUpView = props => {
           ]}>
           <FastImage
             source={require('../../assets/images/hot-drink.png')}
-            style={styles.imgCoffee}
+            style={styles.img}
             resizeMode="contain"
           />
-        </Animated.View>
-
+        </Animated.View> */}
+        <Animated.Image
+          style=
+          {[
+            styles.img,
+            {transform: [{rotate: props.rotateData}]}
+          ]}
+          source={require('../../assets/images/tableware.png')}
+        />
       </View>
     </View>
   );
@@ -103,15 +110,12 @@ const getStyles = insets =>
       display: 'flex',
       flexDirection: 'row',
       marginTop: 10,
+      justifyContent: 'center',
     },
-    imgCarrot: {
-      height: 100,
-      width: 100,
+    img: {
+      height: 150,
+      width: 150,
     },
-    imgCoffee: {
-      height: 100,
-      width: 100,
-    }
   });
 
 export default SignUpView;

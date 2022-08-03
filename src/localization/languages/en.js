@@ -4,6 +4,9 @@ export default {
     createAccount: 'Create an account',
     logIn: 'Log in',
   },
+  logIn: {
+    back: 'Welcome back',
+  },
   signUp: {
     title: 'Create an account',
     subtitle:

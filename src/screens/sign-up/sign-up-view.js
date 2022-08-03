@@ -110,7 +110,6 @@ const getStyles = insets =>
       paddingTop: insets.top + 44 + 16, // 44 - header back arrow block height
     },
     gradient: {
-      width: '100%',
       height: 32,
     },
     inputBlock: {

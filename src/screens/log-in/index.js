@@ -12,13 +12,13 @@ const LogInContainer = props => {
     Animated.sequence([
       Animated.delay(300),
       Animated.timing(carrotsetX, {
-        toValue: -20,
-        duration: 2000,
+        toValue: 150,
+        duration: 3500,
         useNativeDriver: true,
       }),
       Animated.timing(carrotsetX, {
-        toValue: 0,
-        duration: 2000,
+        toValue: -150,
+        duration: 3500,
         useNativeDriver: true,
       }),
     ]).start(startMoveCarrot);

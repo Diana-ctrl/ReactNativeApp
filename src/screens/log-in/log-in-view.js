@@ -3,10 +3,10 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   Platform,
-  TouchableWithoutFeedback,
   View,
   StyleSheet,
   Animated,
+  FastImage,
 } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
@@ -14,9 +14,13 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Button, Text, Input} from '../../components';
 import {colors} from '../../styles';
 import STRINGS from '../../localization';
+
 const LogInView = props => {
   const insets = useSafeAreaInsets();
   const styles = getStyles(insets);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const $onBlur = () => {
     Keyboard.dismiss();
   };
@@ -50,16 +54,17 @@ const LogInView = props => {
           value={props.email}
           placeholder={STRINGS.signUp.email}
           onChange={props.onChangeEmail}
+          containerStyles={styles.input}
         />
         <Input
           value={props.password}
           placeholder={STRINGS.signUp.password}
           onChange={props.onChangePassword}
-          containerStyles={styles.secondInput}
+          containerStyles={styles.input}
         />
       </View>
-      <View style={styles.containerForImgages}>
-        <Animated.View
+     <View style={styles.containerForImages}>
+         {/* <Animated.View
           style={[
             {
               transform: [{translateX: props.carrotsetX}],
@@ -82,26 +87,27 @@ const LogInView = props => {
             style={styles.img}
             resizeMode="contain"
           />
-        </Animated.View>
+        </Animated.View> */}
+        <Animated.Image
+          style={[
+            styles.img,
+            {
+              transform: [{translateX: props.carrotsetX}],
+            },
+        ]}
+        source={require('../../assets/images/carrot.png')}/>
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.avoidingView}>
         <View onTouchStart={Keyboard.dismiss} style={styles.buttonContainer}>
           <Button
-            disabled={props.password.length < 8 || !props.email.includes('@')}
+            disabled={props.password?.length < 8 || !props.email?.includes('@')}
             onPress={props.handleSignUp}
             value={STRINGS.signUp.title}
             isLoading={props.isLoading}
           />
         </View>
-      </KeyboardAvoidingView>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <View style={styles.buttonContainer}>
-        </View>
-        </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </View>
   );
@@ -114,24 +120,31 @@ const getStyles = insets =>
       paddingHorizontal: 16,
       paddingTop: insets.top + 44 + 16, // 44 - header back arrow block height
     },
+    containerForImages: {
+      display: 'flex',
+      alignItems: 'center',
+    },
     gradient: {
       height: 32,
     },
-    containerView: {
-      flex: 1,
-    },
     input: {
-      height: 50,
-      margin: 12,
-      padding: 12,
-      borderWidth: 4,
-      justifyContent: 'flex-end',
-      paddingBottom: 16,
+      marginTop: 16,
+    },
+    avoidingView: {
+      flex: 1,
     },
     buttonContainer: {
       flex: 1,
       justifyContent: 'flex-end',
       paddingBottom: 16,
+    },
+    inputBlock: {
+      display: 'flex',
+      paddingBottom: 20,
+    },
+    img: {
+      width: 150,
+      height: 150,
     },
   });
 

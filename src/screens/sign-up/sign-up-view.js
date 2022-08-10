@@ -57,31 +57,7 @@ const SignUpView = props => {
           containerStyles={styles.secondInput}
         />
       </View>
-      <View style={styles.containerForImgages}>
-        {/* <Animated.View
-          style={[
-            {
-              transform: [{translateX: props.carrotsetX}],
-            },
-          ]}>
-          <FastImage
-            source={require('../../assets/images/carrot.png')}
-            style={styles.img}
-            resizeMode="contain"
-          />
-        </Animated.View>
-        <Animated.View
-          style={[
-            {
-              transform: [{translateY: props.coffeesetY}],
-            },
-          ]}>
-          <FastImage
-            source={require('../../assets/images/hot-drink.png')}
-            style={styles.img}
-            resizeMode="contain"
-          />
-        </Animated.View> */}
+      <View style={styles.containerForImages}>
         <Animated.Image
           style={[styles.img, {transform: [{rotate: props.rotateData}]}]}
           source={require('../../assets/images/tableware.png')}
@@ -118,7 +94,7 @@ const getStyles = insets =>
     secondInput: {
       marginTop: 10,
     },
-    containerForImgages: {
+    containerForImages: {
       display: 'flex',
       flexDirection: 'row',
       marginTop: 10,

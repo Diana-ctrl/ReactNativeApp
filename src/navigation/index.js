@@ -38,15 +38,14 @@ const RootStack = () => {
         tabBarActiveTintColor: colors.primary.gradient[0],
         tabBarInactiveTintColor: colors.primary.gradient[1],
       })}>
-      {/* {userData.role === 'user' ? (
-        <RootStackNav.Screen
+      {/* {userData.role === 'user' ? ( */}
+        {/* <RootStackNav.Screen
           name="Main"
           options={{
             headerShown: false,
           }}
           component={MainStack}
-        />
-      ) : ( */}
+        /> */}
       <RootStackNav.Screen
         name="Auth"
         options={{

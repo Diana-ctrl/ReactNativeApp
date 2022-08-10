@@ -4,9 +4,11 @@ import {useDispatch} from 'react-redux';
 import LogInView from './log-in-view';
 import {updateUserData} from '../../store/reducers/user';
 
-const LogInContainer = props => {
+const LogInContainer = ({navigation}) => {
   const carrotsetX = useRef(new Animated.Value(0)).current;
   const coffeesetY = useRef(new Animated.Value(0)).current;
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const startMoveCarrot = () => {
     Animated.sequence([
@@ -39,12 +41,29 @@ const LogInContainer = props => {
       }),
     ]).start(startMoveCoffee);
   };
+  const onChangeEmail = e => {
+    setEmail(e);
+  };
+
+  const onChangePassword = e => {
+    setPassword(e);
+  };
+  const handleSignUp = () => {
+    navigation.navigate('Home');
+  }
   useEffect(() => {
     startMoveCarrot();
     startMoveCoffee();
   }, []);
 
-  return <LogInView carrotsetX={carrotsetX} coffeesetY={coffeesetY} />;
-};
+  return (
+    <LogInView
+      carrotsetX={carrotsetX}
+      coffeesetY={coffeesetY}
+      email={email}
+      password={password}
+      onChangeEmail={onChangeEmail}
+      onChangePassword={onChangePassword} />
+)};
 
 export default LogInContainer;

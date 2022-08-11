@@ -86,14 +86,14 @@ const LogInView = props => {
             resizeMode="contain"
           />
         </Animated.View> */}
-        {/* <Animated.Image
+        <Animated.Image
           style={[
             styles.img,
             {
               transform: [{translateX: props.carrotsetX}],
             },
           ]}
-          source={require('../../assets/images/carrot.png')}/> */}
+          source={require('../../assets/images/carrot.png')}/>
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
